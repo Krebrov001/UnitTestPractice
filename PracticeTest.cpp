@@ -27,7 +27,7 @@ TEST(PracticeTest, aa_is_palindrome)
 }
 
 
-TEST(PracticeTest, Ba_is_not_palindrome)
+TEST(PracticeTest, Ba_not_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("Ba");
@@ -39,5 +39,29 @@ TEST(PracticeTest, Bab_is_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("Bab");
+    ASSERT_TRUE(actual);
+}
+
+
+TEST(PracticeTest, Kayak_is_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("Kayak");
+    ASSERT_TRUE(actual);
+}
+
+
+TEST(PracticeTest, Moon_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("Moon");
+    ASSERT_FALSE(actual);
+}
+
+
+TEST(PracticeTest, b1100110011_is_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("1100110011");
     ASSERT_TRUE(actual);
 }
