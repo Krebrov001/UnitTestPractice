@@ -14,12 +14,14 @@ class PracticeTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor)
 };
 
+
 TEST(PracticeTest, is_simple_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("aa");
     ASSERT_TRUE(actual);
 }
+
 
 TEST(PracticeTest, is_not_a_palindrome)
 {
