@@ -15,7 +15,11 @@ class PracticeTest : public ::testing::Test
 };
 
 
-TEST(PracticeTest, is_simple_palindrome)
+/* Happy tests for
+ * Practice::isPalindrome(string input)
+ */
+
+TEST(PracticeTest, aa_is_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("aa");
@@ -23,9 +27,17 @@ TEST(PracticeTest, is_simple_palindrome)
 }
 
 
-TEST(PracticeTest, is_not_a_palindrome)
+TEST(PracticeTest, Ba_is_not_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("Ba");
+    ASSERT_FALSE(actual);
+}
+
+
+TEST(PracticeTest, Bab_is_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("Bab");
     ASSERT_FALSE(actual);
 }
