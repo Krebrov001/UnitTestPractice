@@ -65,3 +65,25 @@ TEST(PracticeTest, b1100110011_is_palindrome)
     bool actual = obj.isPalindrome("1100110011");
     ASSERT_TRUE(actual);
 }
+
+
+TEST(PracticeTest, multi_word_palindrome1)
+{
+    Practice obj;
+    // Spaces are ignored in "ordinary" palindromes but not in "strict" ones.
+    // A "strict" palindrome (spaces count)
+    bool actual = obj.isPalindrome("Able was I ere I saw Elba");
+    ASSERT_TRUE(actual);
+}
+
+
+TEST(PracticeTest, multi_word_palindrome2)
+{
+    Practice obj;
+    // Spaces are ignored in "ordinary" palindromes but not in "strict" ones.
+    // An "ordinary" palindrome (spaces are ignored)
+    // The description of Practice::isPalindrome() says that it checks if the input string
+    // is strictly a palindrome, but disregarding case.
+    bool actual = obj.isPalindrome("A man a plan a canal Panama");
+    ASSERT_FALSE(actual);
+}
