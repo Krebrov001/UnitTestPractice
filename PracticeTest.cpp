@@ -67,7 +67,7 @@ TEST(PracticeTest, b1100110011_is_palindrome)
 }
 
 
-TEST(PracticeTest, multi_word_palindrome1)
+TEST(PracticeTest, multi_word_palindrome)
 {
     Practice obj;
     // Spaces are ignored in "ordinary" palindromes but not in "strict" ones.
@@ -77,7 +77,7 @@ TEST(PracticeTest, multi_word_palindrome1)
 }
 
 
-TEST(PracticeTest, multi_word_palindrome2)
+TEST(PracticeTest, multi_word_not_palindrome)
 {
     Practice obj;
     // Spaces are ignored in "ordinary" palindromes but not in "strict" ones.
