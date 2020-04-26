@@ -39,5 +39,5 @@ TEST(PracticeTest, Bab_is_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("Bab");
-    ASSERT_FALSE(actual);
+    ASSERT_TRUE(actual);
 }
