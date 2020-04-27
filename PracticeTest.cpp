@@ -121,9 +121,17 @@ TEST(PracticeTest, empty_string_palindrome)
 }
 
 
-TEST(PracticeTest, carrots_not_palindrome)
+TEST(PracticeTest, special_chars_1_not_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome(">^");
+    ASSERT_FALSE(actual);
+}
+
+
+TEST(PracticeTest, special_chars_2_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("@`");
     ASSERT_FALSE(actual);
 }
