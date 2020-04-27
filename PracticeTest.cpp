@@ -22,6 +22,66 @@ class PracticeTest : public ::testing::Test
  */
 
 
+TEST(PracticeTest, num_10_20_30)
+{
+    Practice obj;
+    int first  = 10;
+    int second = 20;
+    int third  = 30;
+    obj.sortDescending(first, second, third);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
+}
+
+
+TEST(PracticeTest, num_10_30_20)
+{
+    Practice obj;
+    int first  = 10;
+    int second = 30;
+    int third  = 20;
+    obj.sortDescending(first, second, third);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
+}
+
+
+TEST(PracticeTest, num_20_10_30)
+{
+    Practice obj;
+    int first  = 20;
+    int second = 10;
+    int third  = 30;
+    obj.sortDescending(first, second, third);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
+}
+
+
+TEST(PracticeTest, num_20_30_10)
+{
+    Practice obj;
+    int first  = 20;
+    int second = 30;
+    int third  = 10;
+    obj.sortDescending(first, second, third);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
+}
+
+
+TEST(PracticeTest, num_30_10_20)
+{
+    Practice obj;
+    int first  = 30;
+    int second = 10;
+    int third  = 20;
+    obj.sortDescending(first, second, third);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
+}
+
+
 TEST(PracticeTest, num_30_20_10)
 {
     Practice obj;
@@ -32,6 +92,11 @@ TEST(PracticeTest, num_30_20_10)
     ASSERT_LE(third, second);
     ASSERT_LE(second, first);
 }
+
+
+/* Sad tests for
+ * Practice::sortDescending(int& first, int& second, int& third)
+ */
 
 
 TEST(PracticeTest, num_20_20_10)
@@ -64,42 +129,6 @@ TEST(PracticeTest, num_10_10_10)
     int first  = 10;
     int second = 10;
     int third  = 10;
-    obj.sortDescending(first, second, third);
-    ASSERT_LE(third, second);
-    ASSERT_LE(second, first);
-}
-
-
-TEST(PracticeTest, num_20_30_10)
-{
-    Practice obj;
-    int first  = 20;
-    int second = 30;
-    int third  = 10;
-    obj.sortDescending(first, second, third);
-    ASSERT_LE(third, second);
-    ASSERT_LE(second, first);
-}
-
-
-TEST(PracticeTest, num_10_30_20)
-{
-    Practice obj;
-    int first  = 10;
-    int second = 30;
-    int third  = 20;
-    obj.sortDescending(first, second, third);
-    ASSERT_LE(third, second);
-    ASSERT_LE(second, first);
-}
-
-
-TEST(PracticeTest, num_10_20_30)
-{
-    Practice obj;
-    int first  = 10;
-    int second = 20;
-    int third  = 30;
     obj.sortDescending(first, second, third);
     ASSERT_LE(third, second);
     ASSERT_LE(second, first);
