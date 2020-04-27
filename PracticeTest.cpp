@@ -70,6 +70,18 @@ TEST(PracticeTest, num_10_10_10)
 }
 
 
+TEST(PracticeTest, num_20_30_10)
+{
+    Practice obj;
+    int first  = 20;
+    int second = 30;
+    int third  = 10;
+    obj.sortDescending(first, second, third);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
+}
+
+
 /* Happy tests for
  * Practice::isPalindrome(string input)
  */
