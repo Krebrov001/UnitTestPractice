@@ -135,3 +135,19 @@ TEST(PracticeTest, special_chars_2_not_palindrome)
     bool actual = obj.isPalindrome("@`");
     ASSERT_FALSE(actual);
 }
+
+
+TEST(PracticeTest, special_chars_3_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("\x2Γ");
+    ASSERT_FALSE(actual);
+}
+
+
+TEST(PracticeTest, special_chars_4_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("\x7τ");
+    ASSERT_FALSE(actual);
+}
