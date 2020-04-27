@@ -18,6 +18,23 @@ class PracticeTest : public ::testing::Test
 
 
 /* Happy tests for
+ * Practice::sortDescending(int& first, int& second, int& third)
+ */
+
+
+TEST(PracticeTest, num_30_20_10)
+{
+    Practice obj;
+    int first  = 30;
+    int second = 20;
+    int third  = 10;
+    obj.sortDescending(first, second, third);
+    ASSERT_LT(third, second);
+    ASSERT_LT(second, first);
+}
+
+
+/* Happy tests for
  * Practice::isPalindrome(string input)
  */
 
@@ -168,7 +185,7 @@ TEST(PracticeTest, null_in_the_middle_not_palindrome)
 }
 
 
-TEST(PracticeTest, null_in_the_middle_not_palindrome2)
+TEST(PracticeTest, null_in_the_middle_palindrome)
 {
     Practice obj;
     // The characters after the \0 get cut off in the std::string::string(std::string)
