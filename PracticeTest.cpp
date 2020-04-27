@@ -87,3 +87,27 @@ TEST(PracticeTest, multi_word_not_palindrome)
     bool actual = obj.isPalindrome("A man a plan a canal Panama");
     ASSERT_FALSE(actual);
 }
+
+
+TEST(PracticeTest, dashed_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("a-b-c-b-a");
+    ASSERT_TRUE(actual);
+}
+
+
+
+/* Sad tests for
+ * Practice::isPalindrome(string input)
+ */
+
+
+TEST(PracticeTest, abcdedxba_not_palindrome)
+{
+    Practice obj;
+    // A very simple sad test.
+    // Palindrome except for one character
+    bool actual = obj.isPalindrome("abcdedxba");
+    ASSERT_FALSE(actual);
+}
