@@ -111,3 +111,19 @@ TEST(PracticeTest, abcdedxba_not_palindrome)
     bool actual = obj.isPalindrome("abcdedxba");
     ASSERT_FALSE(actual);
 }
+
+
+TEST(PracticeTest, empty_string_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("");
+    ASSERT_TRUE(actual);
+}
+
+
+TEST(PracticeTest, carrots_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome(">^");
+    ASSERT_FALSE(actual);
+}
