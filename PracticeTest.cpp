@@ -41,8 +41,20 @@ TEST(PracticeTest, num_20_20_10)
     int second = 20;
     int third  = 10;
     obj.sortDescending(first, second, third);
-    ASSERT_LT(third, second);
-    ASSERT_LT(second, first);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
+}
+
+
+TEST(PracticeTest, num_20_10_10)
+{
+    Practice obj;
+    int first  = 20;
+    int second = 10;
+    int third  = 10;
+    obj.sortDescending(first, second, third);
+    ASSERT_LE(third, second);
+    ASSERT_LE(second, first);
 }
 
 
