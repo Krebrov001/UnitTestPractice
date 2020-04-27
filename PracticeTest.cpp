@@ -3,6 +3,8 @@
 **/
 
 #include <gtest/gtest.h>
+#include <string>
+#include <iostream>
 #include "Practice.h"
 
 class PracticeTest : public ::testing::Test
@@ -156,6 +158,8 @@ TEST(PracticeTest, special_chars_4_not_palindrome)
 TEST(PracticeTest, null_in_the_middle_palindrome)
 {
     Practice obj;
+    std::string s = "abc\0cba";
+    std::cout << s << std::endl;
     bool actual = obj.isPalindrome("abc\0cba");
     ASSERT_TRUE(actual);
 }
