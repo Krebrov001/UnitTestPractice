@@ -6,4 +6,4 @@ This repository consists of unit tests for two functions:
 
 1. `Practice::sortDescending()`
 
-2, `Practice::isPalindrome()`
+2. `Practice::isPalindrome()`
