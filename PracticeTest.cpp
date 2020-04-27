@@ -151,3 +151,11 @@ TEST(PracticeTest, special_chars_4_not_palindrome)
     bool actual = obj.isPalindrome("\x7τ");
     ASSERT_FALSE(actual);
 }
+
+
+TEST(PracticeTest, null_in_the_middle_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("abc\0cba");
+    ASSERT_TRUE(actual);
+}
