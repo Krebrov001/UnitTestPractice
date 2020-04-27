@@ -155,12 +155,24 @@ TEST(PracticeTest, special_chars_4_not_palindrome)
 }
 
 
-TEST(PracticeTest, null_in_the_middle_not_palindrome)
+TEST(PracticeTest, null_in_the_middle_not_palindrome1)
 {
     Practice obj;
     // The characters after the \0 get cut off in the std::string::string(char*)
     //std::string s = "abc\0cba";
     //std::cout << s << std::endl;
     bool actual = obj.isPalindrome("abc\0cba");
+    ASSERT_FALSE(actual);
+}
+
+
+TEST(PracticeTest, null_in_the_middle_not_palindrome2)
+{
+    Practice obj;
+    // The characters after the \0 get cut off in the std::string::string(char*)
+    std::string s = "abcxcba";
+    s[3] = '\0';
+    //std::cout << s << std::endl;
+    bool actual = obj.isPalindrome(s);
     ASSERT_FALSE(actual);
 }
